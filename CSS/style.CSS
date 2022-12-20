@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Source+Sans+Pro&display=swap");
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
+/*Footer section*/
+.footer-text {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.35rem;
+    line-height: 145%;
+    color: #fdfdfd;
+  }
+  #footer {
+    background-color: #02428e;
+  }

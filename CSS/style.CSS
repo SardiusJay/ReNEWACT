@@ -54,7 +54,7 @@ li a{
   text-decoration: none;
 }
 .welcome{
-  background-color: aqua;
+  background-color: green;
   color: #000;
   font-size: 40px;
   font-weight: 300;
@@ -89,4 +89,9 @@ li a{
 section p{
   font-size: 15px;
   margin: 2rem 0rem;
+}
+
+.logo {
+  width: 58px;
+  margin: auto;
 }

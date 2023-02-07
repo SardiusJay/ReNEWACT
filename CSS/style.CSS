@@ -41,7 +41,7 @@ img{
   position: absolute;
   background-color: #000;
   color: #fff;
-  padding: 0.5rem;
+  padding: 0.6rem;
   right: 0;
 }
 li{
@@ -71,6 +71,9 @@ li a{
 .col-xs-6{
   padding: 0.5rem;
   border: 1px solid;
+  align-items: center;
+  justify-content: center
+   ;
 }
 .home-header{
   font-size: 1em;

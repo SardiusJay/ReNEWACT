@@ -80,7 +80,6 @@ li a{
   align-items: center;
   justify-content: center
   color: #3cb371;
-   
 }
 .home-header{
   font-size: 1em;
@@ -130,15 +129,30 @@ section p{
   padding-left: 10px;
   padding-right: 10px;
 }
+
+/* Footer section */
 #footer {
   background-color: #3cb371;
   color: #222;
   padding: 0 0 40px; 
   overflow: hidden;
   font-size: 20px;
+  display: flex;
+  
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-bottom: .5rem;
   /* opacity: 0.7; * */
+
+.top-texts{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-@media (min-width: 576px)
-.container, .container-sm {
-  max-width: 540px;
+
 }
+

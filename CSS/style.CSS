@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&family=Roboto:ital,wght@0,500;1,100;1,300;1,400;1,500&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
   
 img{
   display: block;
@@ -21,6 +25,8 @@ img{
   background-size: cover;
   height: 70vh;
   animation: animate 20s ease-in-out infinite;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 @keyframes animate{
   0%, 100%{
@@ -74,7 +80,7 @@ li a{
   align-items: center;
   justify-content: center
   color: #3cb371;
-   ;
+   
 }
 .home-header{
   font-size: 1em;
@@ -129,7 +135,7 @@ section p{
   color: #222;
   padding: 0 0 40px; 
   overflow: hidden;
-  font-size: 14px;
+  font-size: 20px;
   /* opacity: 0.7; * */
 }
 @media (min-width: 576px)

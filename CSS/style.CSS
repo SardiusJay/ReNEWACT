@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&family=Roboto:ital,wght@0,500;1,100;1,300;1,400;1,500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 * {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  /* transition: all 0.2s linear; */
+}
+
+:root {
+  /* colors */
+
+  --primary: #04556e;
+  --secondary: #022831;
+  -tertiary: #689368;
 }
 
 img{
@@ -171,6 +184,87 @@ body {
 }
 
 /* Then media queries for wider screens */
+
+/* MAKING THE PAGE RESPONSIVE */
+
+/* media queries  */
+
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+
+  .home {
+    padding: 2rem;
+  }
+  .footer {
+    padding: 2rem;
+  }
+  .place-card-wrapper {
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
+  .place-card {
+    width: 100%;
+  }
+  .section {
+    padding: 10px;
+  }
+  .apartment {
+    margin-bottom: 100px;
+  }
+
+  .food {
+    margin-top: 100px;
+  }
+  .rest-card-wrapper {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 30% 30% 30%;
+    gap: 4%;
+  }
+  .rest-card {
+    width: 100%;
+  }
+  .btn-s {
+    margin: 5px 20px;
+  }
+  .taxi-wrapper {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 30% 30% 30%;
+    gap: 4%;
+  }
+  .taxi-card {
+    width: 100%;
+  }
+  .taxi-card img {
+    width: 100%;
+  }
+  .car {
+    margin-bottom: 60px;
+  }
+  .car-wrapper {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 5%;
+    justify-content: space-between;
+  }
+  .car-card {
+    width: 100%;
+  }
+  .car img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
 
 /* For screens 768px and wider */
 @media (min-width: 768px) {

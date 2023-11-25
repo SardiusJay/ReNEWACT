@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-	<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
-	<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
-	<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
-	<style lang="en" type="text/css" id="dark-mode-native-style"></style>
-	<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,39 +7,56 @@
 	<title>ReNEWACT Laboratory </title>
 
 	<!-- Stylesheets -->
-    <link rel="stylesheet" href="CSS/style.CSS" />
+        <link rel="stylesheet" href="CSS/style2.css" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
 	
 </head>
 <body>
-	<header class="headers">
-		<div class="top_header">
-			<!--Landmark university Logo-->
-			<ul><img src="./CSS/images/LMU Logo.png" class="logo" alt="LMU Logo" /></ul>
-	
-			<!--Renewact Lab Logo-->
-			<ul><img src="./CSS/images/ReNEWACT.png" class="logo1" alt="ReNEWACT Logo" /></ul>
-		</div>
-	
-		<!--Navbar Section-->
-		<div class="heros">
-			<nav class="navbar">
-				<li><a class="active" href="/home">Home</a></li>
-	<li><a class="" href="./Research.html">Research</a></li>
-	<li><a class="" href="./Team.html">Team</a></li>
-	<li><a class="" href="./Education.html">Education</a></li>
-	<li><a class="" href="./Publication.html">Publications</a></li>
-	<li><a class="" href="./News.html">News</a></li>
-			</nav>
-		</div>
-			<div class="welcome">
-				Publications
+    <!-- header section -->
+	<header class="header" id="header">
+		<nav class="nav container" id="nav">
+			<div class="logo">
+			<img src="./CSS/images/LMU Logo.png" alt="">
 			</div>
-		</header>
+
+			<div class="logo2">
+				<img src="./CSS/images/ReNEWACT.png" alt="logo">
+			</div>
+
+				<div class="list-container" id="list-container">
+					<ul class="list" id="list">
+						<li class="list-item"><a class="link" href="./index.html">Home</a></li>
+						<li class="list-item"><a class="link" href="./Research.html" target="_blank">Research</a></li>
+						<li class="list-item"><a class="link" href="./Team.html" target="_blank">Team</a></li>
+						<li class="list-item"><a class="link" href="./Education.html" target="_blank">Education</a></li>
+						<li class="list-item"><a class="link" href="./Publication.html" target="_blank">Publications</a></li>
+						<li class="list-item"><a class="link" href="./News.html" target="_blank">News</a></li>
+						<li class="list-item"><a class="link" href="./Contact.html" target="_blank">Contact</a></li>
+					</ul>
+
+				<div class="nav-close" id="nav-close">
+					<i class="ri-close-line"></i>
+				</div>
+
+				</div>
+
+				<div class="nav-toggle" id="nav-toggle">
+					<i class="ri-menu-line"></i>
+				</div>
+		</nav>
+	</header>
 		<!--Navbar Section ends-->
 	
 		<!---Publication section start-->
-		<div class="col-sm-10 col-xs-12">
-			<ul class="publications">
+		<div class="home-img">
+			<img src="./CSS/images/research.webp" alt="" class="home-img">
+				<h3>Publications</h3>
+		</div>
+		<div class="home-data">
+			<ul class="link" id="list">
 				<li><strong>Stimulants and donors promote megaplasmid pND6-2 horizontal gene transfer in activated sludge</strong>
 					<br>S Wang, S Li, D Du, OK Abass, MS Nasir, W Yan<br>
 					Journal of Environmental Sciences 126, 742-753<strong> 2023<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=fjqP0KUAAAAJ&sortby=pubdate&citation_for_view=fjqP0KUAAAAJ:qxL8FJ1GzNcC" ></a></strong></li>
@@ -101,28 +113,20 @@
 
 		
 <!--footer section start-->
-
-<footer id="footer">
-	<div class="wrap container">
-		<div class="row">
-			<div class="col-sm-9">
-				<p>
-				<strong>Dr. Olusegun K. Abass</strong>
-				<br>
-				<p>
-					Room C-003, New College Building, <br>
-					Landmark University, <br>
-					Km 4, Ipetu, Omu-Aran Road, <br>
-					PMB 1001, Omu-Aran, Kwara State<br>
-					abass.olusegun@lmu.edu.ng, segunabass1@gmail.com
-					</p>
-				</p>
-			</div>
-			
-		</div>
+<footer class="footer " id="footer">
+	<div class="footer-container grid section">
+		<h2 class="boss">Dr. Olusegun K. Abass</h2>
+			<p>
+				Room C-003, New College Building, <br>
+				Landmark University, <br>
+				Km 4, Ipetu, Omu-Aran Road, <br>
+				PMB 1001, Omu-Aran, Kwara State<br>
+				<i class="fa-regular fa-paper-plane"></i>Email: abass.olusegun@lmu.edu.ng, segunabass1@gmail.com
+			</p>
 	</div>
- </footer>
-	 
-  <!-- Footer Section End-->
+</footer>
+<!-- Footer Section End-->
+<script src="./app.js"></script>
+
 		</body>
 		</html>

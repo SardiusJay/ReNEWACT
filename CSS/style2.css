@@ -188,7 +188,7 @@ img {
 .nav-toggle,
 .nav-close {
     font-size: 1.5rem;
-    color: var(--color-text);
+    color: var(--first-color);
     cursor: pointer;
 }
 

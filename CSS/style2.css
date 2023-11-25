@@ -254,7 +254,7 @@ h3{
 }
 
 .bottom-text p{
-    color: var(--color-text);
+    color: var(--first-text);
 }
 
 .bottom-text p i, .footer-container p i{

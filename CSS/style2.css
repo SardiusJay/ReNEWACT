@@ -194,6 +194,8 @@ img {
 
 .home-img{
     margin-top: 3rem;
+    width: 100%;
+    align-items: center;
 }
 
 .home-section{

@@ -54,7 +54,7 @@
 
 body {
     font-family: var(--body-font);
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     background-color: var(--title-color);
     color: var(--text-color);
     min-height: 100vh;
@@ -66,9 +66,16 @@ h2,
 h3 {
     /* color: var(--title-color); */
     font-family: var(--title-font);
-    font-weight: var(--font-medium);
+    font-weight: var(--small-font-size);
+    font-size: var(--small-font-size);
+}
+.text {
+    font-size: var(--small-font-size);
 }
 
+p {
+    font-size: var(--small-font-size);
+}
 ul {
     list-style: none;
 }
@@ -253,6 +260,7 @@ h3{
 .product-link{
     color: var(--first-text);
     cursor: pointer;
+    font-size: var(--small-font-size);
 }
 
 .bottom-text p{
@@ -265,17 +273,18 @@ h3{
 
 .footer{
     background-color: var(--first-color);
-    min-width: 541px;
+    min-width: 500px;
 }
 
 
 .footer-container{
-    text-align: center;
-    color: var(--color-text);
+    text-align: left;
+ color: var(--color-text);
+ font-size: var(--small-font-size);
 }
 
 .footer-container .boss{
-    font-size: var(--biggest-font-size);
+    font-size: var(--normal-font-size);
 }
 
 @media screen and (max-width: 552px){

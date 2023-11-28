@@ -210,8 +210,8 @@ img {
 }
 
 .home-content{
-    display: grid;
-    row-gap: 2rem;
+    display: flex;
+    gap: 4rem;
 }
 
 .sample-text{
@@ -225,9 +225,11 @@ img {
 }
 
 .home-data{
-    row-gap: 20rem;
-    text-align: center;
+    max-width: 25rem;
+    margin-right: 2rem;
     color: var(--first-text);
+    align-items: center;
+    justify-content: center;
 }
 
 h3{

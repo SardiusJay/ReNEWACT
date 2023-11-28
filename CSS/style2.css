@@ -75,6 +75,8 @@ h3 {
 p {
     font-size: var(--small-font-size);
 }
+
+<hr { width: 10px;}
 ul {
     list-style: none;
 }
@@ -321,17 +323,12 @@ h3{
     }
 
     p{
-        font-size: 1.7rem;
+        font-size: 1.0rem
     }
 
     a{
         font-size: 1.5rem;
         font-weight: 400;
-    }
-
-   
-    .footer{
-        /* width: 125%; */
     }
 }
 

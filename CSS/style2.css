@@ -75,6 +75,8 @@ h3 {
 p {
   font-size: var(--small-font-size);
 }
+
+<hr { width: 10px;}
 ul {
   list-style: none;
 }
@@ -87,6 +89,7 @@ a {
   max-width: 100%;
   height: auto;
 } */
+
 
 .container {
   max-width: 1024px;
@@ -225,6 +228,11 @@ a {
   background-color: var(--first-color);
 }
 
+.staff-name {
+    float: right;
+    width: 100px;
+}
+
 .home-data {
   max-width: 25rem;
   margin-right: 2rem;
@@ -313,7 +321,7 @@ h3 {
   }
 
   p {
-    font-size: 1.7rem;
+    font-size: 1.0rem;
   }
 
   a {
@@ -327,9 +335,6 @@ h3 {
   .research-container {
     display: flex;
     flex-direction: column;
-  }
-
-  .research-example {
   }
 
   .research-img img {

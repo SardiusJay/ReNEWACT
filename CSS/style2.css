@@ -216,7 +216,10 @@ h3 {
   line-height: 29px;
   min-width: 120px;
 }
-
+h4{
+    align-items: center;
+    font-size: var(--normal-font-size);
+}
 .research-container {
   display: flex;
   gap: 4rem;

@@ -3,7 +3,7 @@
 /* CSS Variables */
 
 :root {
-  --header-height: 5rem;
+  --header-height: 8.5rem;
   --first-color: hsl(147, 50%, 47%);
   --title-color: hsl(0, 100%, 100%);
   --text-color: hsl(0, 100%, 0%);
@@ -76,7 +76,6 @@ p {
   font-size: var(--small-font-size);
 }
 
-<hr { width: 10px;}
 ul {
   list-style: none;
 }
@@ -84,12 +83,6 @@ ul {
 a {
   text-decoration: none;
 }
-
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
-
 
 .container {
   max-width: 1024px;
@@ -139,7 +132,7 @@ a {
   width: 100%;
 }
 .header img {
-  width: 100px;
+  width: 95px;
 }
 .nav {
   height: var(--header-height);
@@ -147,13 +140,10 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
-.logo {
-  width: 70px;
-}
-
-.logo2 {
-  width: 250px;
+.logo-joint {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -229,8 +219,8 @@ a {
 }
 
 .staff-name {
-    float: right;
-    width: 100px;
+  float: right;
+  width: 100px;
 }
 
 .home-data {
@@ -321,7 +311,7 @@ h3 {
   }
 
   p {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 
   a {
@@ -329,9 +319,6 @@ h3 {
     font-weight: 400;
   }
 
-  .footer {
-    /* width: 125%; */
-  }
   .research-container {
     display: flex;
     flex-direction: column;

@@ -250,7 +250,7 @@ h4{
 }
 .centered {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: fit-content;
   display: block;
 }

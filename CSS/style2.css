@@ -139,13 +139,13 @@ a {
 
 .link {
   font-size: 1.2rem;
-  color: var(--first-color);
+  color: black;
   font-weight: var(--font-medium);
   transition: color 0.4s;
 }
 
 .link:hover {
-  color: var(--first-color);
+  color: blue;
 }
 
 .nav-close {
@@ -209,14 +209,14 @@ h2 {
 }
 h3 {
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 1.5rem;
   background-color: var(--first-color);
   color: var(--color-text);
   padding: 0px 10px;
   /*margin-bottom: 2rem;*/
   display: inline-block;
   border-width: 0px 0px 2px 0px;
-  line-height: 29px;
+  line-height: 39px;
   min-width: 120px;
 }
 h4 {

@@ -137,6 +137,12 @@ a {
   row-gap: 3rem;
 }
 
+.color {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
 .link {
   font-size: 1.2rem;
   color: black;

@@ -251,7 +251,7 @@ h4 {
   margin: 0 auto;
   text-align: left;
   width: fit-content;
-  display: block;
+  display: flex;
 }
 
 .bottom-text p {

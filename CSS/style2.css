@@ -66,8 +66,8 @@ h2,
 h3 {
   /* color: var(--title-color); */
   font-family: var(--title-font);
-  font-weight: var(--small-font-size);
-  font-size: var(--small-font-size);
+  font-weight: var(--normal-font-size);
+  font-size: var(--normal-font-size);
 }
 .text {
   font-size: var(--small-font-size);
@@ -78,6 +78,19 @@ p {
 
 ul {
   list-style: none;
+}
+
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 }
 
 a {
@@ -112,6 +125,8 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 200%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -137,15 +152,32 @@ a {
   row-gap: 3rem;
 }
 
+.color {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.link-nav {
+  font-size: 1rem;
+  color: black;
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.link-nav:hover {
+  color:green
+}
+
 .link {
   font-size: 1.2rem;
-  color: var(--first-color);
+  color: black;
   font-weight: var(--font-medium);
   transition: color 0.4s;
 }
 
 .link:hover {
-  color: var(--first-color);
+  color: blue;
 }
 
 .nav-close {
@@ -191,7 +223,7 @@ a {
   flex: 1;
 }
 .product-img img {
-  width: 100%;
+  width: 50%;
 }
 
 .sample-text {
@@ -209,15 +241,15 @@ h2 {
 }
 h3 {
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 2rem;
   background-color: var(--first-color);
   color: var(--color-text);
   padding: 0px 10px;
   /*margin-bottom: 2rem;*/
   display: inline-block;
-  border-width: 0px 0px 2px 0px;
-  line-height: 29px;
-  min-width: 120px;
+  border-width: 0px 0px 4px 0px;
+  line-height: 39px;
+  min-width: 160px;
 }
 h4 {
   align-items: center;
@@ -249,9 +281,9 @@ h4 {
 }
 .centered {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: fit-content;
-  display: block;
+  display: flex;
 }
 
 .bottom-text p {

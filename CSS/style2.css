@@ -113,7 +113,7 @@ a {
   width: 100%;
 }
 .header img {
-  width: 95px;
+  width: 115px;
 }
 .nav {
   height: var(--header-height);
@@ -200,9 +200,10 @@ a {
   margin-block: 3rem;
 }
 .home-img {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 100%;
   align-items: center;
+  object-fit: cover;
 }
 
 .home-content {

@@ -115,6 +115,10 @@ a {
 .header img {
   width: 115px;
 }
+.check {
+  widows: 50px;
+  height: 50px;
+}
 .nav {
   height: var(--header-height);
   display: flex;
@@ -166,7 +170,7 @@ a {
 }
 
 .link-nav:hover {
-  color: green;
+  color: var(--first-color);
 }
 
 .link {

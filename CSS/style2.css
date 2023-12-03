@@ -113,7 +113,11 @@ a {
   width: 100%;
 }
 .header img {
-  width: 95px;
+  width: 115px;
+}
+.check {
+  widows: 130px;
+  height: 130px;
 }
 .nav {
   height: var(--header-height);
@@ -166,7 +170,7 @@ a {
 }
 
 .link-nav:hover {
-  color: green;
+  color: var(--first-color);
 }
 
 .link {
@@ -200,9 +204,10 @@ a {
   margin-block: 3rem;
 }
 .home-img {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 100%;
   align-items: center;
+  object-fit: cover;
 }
 
 .home-content {

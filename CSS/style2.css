@@ -245,7 +245,10 @@ a.product-link:hover {
   margin-inline: auto;
   background-color: var(--first-color);
 }
-
+.odd{
+  padding: 0px 10px 10px 10px;
+  text-align: justify;
+}
 h2 {
   font-size: var(--h2-font-size);
 }

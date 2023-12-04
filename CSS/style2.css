@@ -67,7 +67,7 @@ h3 {
   /* color: var(--title-color); */
   font-family: var(--title-font);
   font-weight: var(--normal-font-size);
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
 }
 .text {
   font-size: var(--small-font-size);
@@ -98,7 +98,7 @@ a {
 }
 a.product-link:hover {
   text-decoration: underline;
-  color: var(--first-color);
+  color:blue;
 
 }
 
@@ -168,14 +168,14 @@ a.product-link:hover {
 }
 
 .link-nav {
-  font-size: 1rem;
+  font-size:var(--small-font-size);
   color: black;
   font-weight: var(--font-medium);
   transition: color 0.4s;
 }
 
 .link-nav:hover {
-  color: var(--first-color);
+  color:blue;
 }
 
 .link {

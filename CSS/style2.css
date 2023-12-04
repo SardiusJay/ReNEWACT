@@ -179,14 +179,14 @@ a.product-link:hover {
 }
 
 .link {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: black;
   font-weight: var(--font-medium);
   transition: color 0.4s;
 }
 
 .link:hover {
-  color: var(--first-color);
+  color:blue ;
 }
 
 .nav-close {

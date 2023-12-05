@@ -98,8 +98,7 @@ a {
 }
 a.product-link:hover {
   text-decoration: underline;
-  color:blue;
-
+  color: blue;
 }
 
 .container {
@@ -168,14 +167,14 @@ a.product-link:hover {
 }
 
 .link-nav {
-  font-size:var(--small-font-size);
+  font-size: var(--small-font-size);
   color: black;
   font-weight: var(--font-medium);
   transition: color 0.4s;
 }
 
 .link-nav:hover {
-  color:blue;
+  color: blue;
 }
 
 .link {
@@ -186,7 +185,7 @@ a.product-link:hover {
 }
 
 .link:hover {
-  color:blue ;
+  color: blue;
 }
 
 .nav-close {
@@ -209,13 +208,13 @@ a.product-link:hover {
   margin-block: 3rem;
 }
 .home-img {
-  margin-top: 1rem;
-  margin-left: 1rem;
   width: 95%;
-  align-items: center;
-  object-fit: fill;
+  margin: 9rem auto 0 auto;
 }
 
+.home-img img {
+  width: 100%;
+}
 .home-content {
   display: flex;
   margin-bottom: 3rem;
@@ -228,7 +227,6 @@ a.product-link:hover {
   display: inline-block;
   border-width: 0px 0px 4px 0px;
   min-width: 100px;
-
 }
 .home-data {
   flex: 1;
@@ -255,7 +253,7 @@ a.product-link:hover {
   margin-inline: auto;
   background-color: var(--first-color);
 }
-.odd{
+.odd {
   padding: 0px 10px 10px 10px;
   text-align: justify;
 }
@@ -302,8 +300,8 @@ h4 {
   cursor: pointer;
   font-size: var(--small-font-size);
   text-decoration: underline;
-  writing-mode: horizontal-tb;
-  text-orientation: upright;
+  /* writing-mode: horizontal-tb; */
+  /* text-orientation: upright; */
 }
 .centered {
   margin: 0 auto;
@@ -344,6 +342,15 @@ h4 {
   max-width: 1024px;
   margin-inline: 1.5rem;
 }
+.news-img {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.news-img img {
+  width: 250px;
+  height: 350px;
+}
 
 footer {
   background-color: var(--first-color);
@@ -379,6 +386,12 @@ footer a:hover {
 @media screen and (min-width: 500px) {
   h3 {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .home-img img {
+    height: 40rem;
   }
 }
 

@@ -219,7 +219,19 @@ a.product-link:hover {
   display: flex;
   margin-bottom: 3rem;
 }
+.public {
+  text-align: justify;
+    font-size: 1rem;
+  background-color: var(--first-color);
+  color: var(--color-text);
+  padding: 0px 10px;
+  /*margin-bottom: 2rem;*/
+  display: inline-block;
+  border-width: 0px 0px 4px 0px;
+  line-height: 39px;
+  min-width: 160px;
 
+}
 .home-data {
   flex: 1;
   margin-inline: 4px;

@@ -209,10 +209,11 @@ a.product-link:hover {
   margin-block: 3rem;
 }
 .home-img {
-  margin-top: 2rem;
-  width: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 95%;
   align-items: center;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .home-content {
@@ -221,15 +222,12 @@ a.product-link:hover {
 }
 .public {
   text-align: justify;
-    font-size: 1rem;
-  background-color: var(--first-color);
-  color: var(--color-text);
+  font-size: 1rem;
   padding: 0px 10px;
   /*margin-bottom: 2rem;*/
   display: inline-block;
   border-width: 0px 0px 4px 0px;
-  line-height: 39px;
-  min-width: 160px;
+  min-width: 100px;
 
 }
 .home-data {
@@ -304,6 +302,8 @@ h4 {
   cursor: pointer;
   font-size: var(--small-font-size);
   text-decoration: underline;
+  writing-mode: horizontal-tb;
+  text-orientation: upright;
 }
 .centered {
   margin: 0 auto;
@@ -340,6 +340,9 @@ h4 {
 }
 .home-header {
   margin-top: 20px;
+  padding-block: 30px;
+  max-width: 1024px;
+  margin-inline: 1.5rem;
 }
 
 footer {

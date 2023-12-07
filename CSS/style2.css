@@ -74,6 +74,8 @@ h3 {
 }
 p {
   font-size: var(--small-font-size);
+  letter-spacing: 0.1em;
+
 }
 
 ul {

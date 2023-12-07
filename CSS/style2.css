@@ -213,6 +213,23 @@ a.product-link:hover {
 .home-img {
   width: 95%;
   margin: 9rem auto 0 auto;
+  background-image: url(./images/main.png);
+  animation: slide 20s infinite;
+
+}
+@keyframes home-img {
+  0%   {
+    background-image: url(./images/main.png);
+  }
+  50%   {
+    background-image: url(./images/main.png);
+  }
+  75%   {
+    background-image: url(./images/main.png);
+  }
+  100%   {
+    background-image: url(./images/main.png);
+  }
 }
 
 .home-img img {

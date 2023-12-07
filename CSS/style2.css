@@ -103,7 +103,7 @@ a.product-link:hover {
 
 .container {
   max-width: 1024px;
-  margin-inline: 1.0rem;
+  margin-inline:0.5rem;
 }
 
 /* ================== header/NAV ========================= */
@@ -294,7 +294,7 @@ h4 {
 
 .research-img img {
   width: 400px;
-  height: 200px;
+  height: 250px;
 }
 
 .product-link {

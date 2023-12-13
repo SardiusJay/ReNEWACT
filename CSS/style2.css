@@ -212,7 +212,10 @@ a.product-link:hover {
 }
 #home-img {
   width: 95%;
-  background-image: url(./images/main.png);
+  /*height: 48rem;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-image: url(./images/main.png);*/
   margin: 9rem auto 0 auto;
   position: relative;
   animation: home-img 5s 1;

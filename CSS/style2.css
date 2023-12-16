@@ -217,16 +217,17 @@ a.product-link:hover {
   width: 95%;
   /*height: 50%;*/
   background-repeat: no-repeat;
-  background-size: cover;
+ /* background-size: cover;
   /*background-image: url(./images/main.png);*/
   margin: 9rem auto 0 auto;
-  position: relative;
+  position: absolute;
   animation: home-img 5s 1;
 
 }
 
 #home-img img {
-  width: 100%;
+  width: 90%;
+  margin-left: 4rem;
 }
 
 @keyframes home-img {

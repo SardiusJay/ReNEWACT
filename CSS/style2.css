@@ -75,7 +75,6 @@ h3 {
 p {
   font-size: var(--small-font-size);
 
-
 }
 
 ul {
@@ -366,6 +365,7 @@ h4 {
   padding-block: 30px;
   max-width: 1024px;
   margin-inline: 1.5rem;
+  margin-left: -0.75rem;
 }
 .news-img {
   display: flex;

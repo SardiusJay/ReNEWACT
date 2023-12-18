@@ -27,13 +27,3 @@ navClose.addEventListener('click', ()=>{
 
 
 
-
-// for (const link of links) {
-//     link.addEventListener('click', ()=>{
-//         for (const otherLinks of links) {
-//             otherLinks.classList.remove('add-color')
-//         }
-
-//         link.classList.add('add-color')
-//     })
-// }

@@ -449,3 +449,14 @@ footer a:hover {
     font-size: var(--small-font-size);
   }
 }
+
+.animation {
+  width: 100px;
+  height: 100px;
+  background: url(./images/main.png) left top;
+  animation: play-sprite 0.8s steps(4) infinite;
+}
+
+@keyframes play-sprite {
+  100% { background-position: -400px; }
+}

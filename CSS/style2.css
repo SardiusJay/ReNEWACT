@@ -70,11 +70,14 @@ h3 {
   font-size: var(--small-font-size);
 }
 .text {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); 
+}
+div .available {
+  display: block;
   
 }
 p {
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
 
 }
 

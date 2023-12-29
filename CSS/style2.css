@@ -71,6 +71,7 @@ h3 {
 }
 .text {
   font-size: var(--small-font-size);
+  
 }
 p {
   font-size: var(--small-font-size);
@@ -500,3 +501,8 @@ footer a:hover {
 @keyframes play-sprite {
   100% { background-position: -400px; }
 }
+
+
+
+
+

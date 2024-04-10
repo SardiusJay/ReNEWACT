@@ -251,7 +251,7 @@ a.product-link:hover {
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: fadeBackground 20s infinite; 
+  animation: fadeBackground 30s infinite; 
 }
 
 .content {

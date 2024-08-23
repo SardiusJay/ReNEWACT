@@ -440,6 +440,8 @@ footer a:hover {
   color: slategray;
 }
 
+
+/*Media query*/
 @media screen and (max-width: 552px) {
   .research-container {
     display: flex;

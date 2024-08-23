@@ -440,6 +440,48 @@ footer a:hover {
   color: slategray;
 }
 
+.profile-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.profile-text {
+  flex: 2;
+}
+
+h1 {
+  font-size: 28px;
+  color: #3a796f;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: black
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
 
 /*Media query*/
 @media screen and (max-width: 552px) {

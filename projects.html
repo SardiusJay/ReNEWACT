@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grants and Projects - ReNEWACT Laboratory</title>
+    <link rel="icon" type="image/x-icon" href="CSS/images/LMU Logo.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="CSS/style2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+
     <style>
         * {
             margin: 0;
@@ -13,18 +21,177 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2847 100%);
-            color: #fff;
+            background: #ffffff;
+            color: #333;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        .container {
+        /* Navbar Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .header {
+        .logo-joint {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-joint img {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-joint img:hover {
+            transform: scale(1.05);
+        }
+
+        .list-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .list-item {
+            position: relative;
+        }
+
+        .link-nav {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .link-nav::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4fc3f7;
+            transition: width 0.3s ease;
+        }
+
+        .link-nav:hover {
+            color: #4fc3f7;
+        }
+
+        .link-nav:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle,
+        .nav-close {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Mobile Navigation */
+        @media screen and (max-width: 1024px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .list-container {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: #ffffff;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                padding: 2rem;
+                transition: right 0.4s ease;
+            }
+
+            .list-container.show-menu {
+                right: 0;
+            }
+
+            .nav-close {
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .list {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+                margin-top: 3rem;
+            }
+
+            .link-nav {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo-joint img {
+                height: 40px;
+            }
+        }
+
+        /* Main content starts after header */
+        .main-content {
+            padding: 100px 20px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+            color: #1a2847;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .content-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -33,9 +200,9 @@
             gap: 15px;
         }
 
-        h1 {
+        .section-title {
             font-size: 28px;
-            color: #4fc3f7;
+            color: #1a2847;
             font-weight: 600;
         }
 
@@ -49,22 +216,23 @@
         .search-box input {
             width: 100%;
             padding: 10px 15px 10px 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #f5f5f5;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            color: #fff;
+            color: #333;
             font-size: 14px;
             outline: none;
             transition: all 0.3s;
         }
 
         .search-box input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
+            color: #999;
         }
 
         .search-box input:focus {
-            background: rgba(255, 255, 255, 0.15);
+            background: #fff;
             border-color: #4fc3f7;
+            box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.1);
         }
 
         .search-box::before {
@@ -79,23 +247,22 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 20px;
+            gap: 24px;
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #e8f5e9;
+            border: 1px solid #81c784;
             border-radius: 12px;
             padding: 24px;
             transition: all 0.3s ease;
-            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .project-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(79, 195, 247, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            border-color: #66bb6a;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
         }
 
         .project-header {
@@ -107,10 +274,10 @@
         }
 
         .project-title {
-            font-size: 16px;
-            color: #4fc3f7;
-            font-weight: 500;
-            line-height: 1.4;
+            font-size: 17px;
+            color: #1a2847;
+            font-weight: 600;
+            line-height: 1.5;
             flex: 1;
         }
 
@@ -124,21 +291,22 @@
         }
 
         .status-progress {
-            background: rgba(76, 175, 80, 0.2);
-            color: #66bb6a;
-            border: 1px solid rgba(76, 175, 80, 0.3);
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #4caf50;
         }
 
         .status-ended {
-            background: rgba(156, 39, 176, 0.2);
-            color: #ba68c8;
-            border: 1px solid rgba(156, 39, 176, 0.3);
+            background: #f3e5f5;
+            color: #6a1b9a;
+            border: 1px solid #9c27b0;
         }
 
         .project-org {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            color: #666;
             margin-bottom: 16px;
+            font-weight: 500;
         }
 
         .project-meta {
@@ -153,21 +321,23 @@
             align-items: center;
             gap: 8px;
             font-size: 13px;
+            color: #555;
         }
 
         .meta-icon {
             font-size: 16px;
-            opacity: 0.8;
+            opacity: 0.7;
         }
 
         .meta-value {
-            color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-weight: 500;
         }
 
         .project-details {
             margin-top: 16px;
             padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid #e0e0e0;
         }
 
         .detail-row {
@@ -175,7 +345,7 @@
             align-items: center;
             gap: 8px;
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
+            color: #555;
             margin-bottom: 8px;
         }
 
@@ -189,18 +359,20 @@
 
         .grant-number {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.5);
+            color: #888;
             margin-top: 12px;
+            font-style: italic;
         }
 
         .details-btn {
             margin-top: 16px;
             padding: 10px 20px;
-            background: rgba(79, 195, 247, 0.15);
-            border: 1px solid rgba(79, 195, 247, 0.3);
+            background: #4fc3f7;
+            border: none;
             border-radius: 8px;
-            color: #4fc3f7;
+            color: #fff;
             font-size: 14px;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s;
             display: inline-flex;
@@ -209,13 +381,18 @@
         }
 
         .details-btn:hover {
-            background: rgba(79, 195, 247, 0.25);
-            border-color: #4fc3f7;
+            background: #29b6f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 195, 247, 0.4);
         }
 
         @media (max-width: 1024px) {
             .projects-grid {
                 grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            }
+
+            .main-content {
+                padding: 90px 20px 40px;
             }
         }
 
@@ -224,7 +401,11 @@
                 grid-template-columns: 1fr;
             }
 
-            h1 {
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .section-title {
                 font-size: 24px;
             }
 
@@ -244,33 +425,96 @@
             .status-badge {
                 align-self: flex-start;
             }
+
+            .main-content {
+                padding: 80px 15px 30px;
+            }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 15px;
+            .main-content {
+                padding: 75px 15px 25px;
             }
 
             .project-card {
                 padding: 18px;
             }
 
-            h1 {
+            .page-header h1 {
+                font-size: 24px;
+            }
+
+            .section-title {
                 font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Projects</h1>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <nav class="nav container" id="nav">
+            <a href="/index.html">
+                <div class="logo-joint">
+                    <img src="./CSS/images/LMU Logo.png" alt="landmark university logo" />
+                    <img src="./CSS/images/ReNEWACT.png" alt="renewact laboratory logo" />
+                </div>
+            </a>
+
+            <div class="list-container" id="list-container">
+                <ul class="list" id="list">
+                    <li class="list-item">
+                        <a class="link-nav" href="./index.html">Home</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./Research.html">Research</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./Team.html">Team</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./Education.html">Education</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./Publication.html">Publications</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./News.html">News</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./Grant&project.html">Grants and Projects</a>
+                    </li>
+                    <li class="list-item">
+                        <a class="link-nav" href="./Contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1>Grants and Projects</h1>
+            <p>Research funding and ongoing projects at ReNEWACT Laboratory</p>
+        </div>
+
+        <div class="content-header">
+            <h2 class="section-title">All Projects</h2>
             <div class="search-box">
-                <input type="text" placeholder="Search project, program, grant...">
+                <input type="text" id="searchInput" placeholder="Search project, program, grant...">
             </div>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid" id="projectsGrid">
             <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-header">
@@ -392,5 +636,45 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Navigation toggle functionality
+        const navToggle = document.getElementById('nav-toggle');
+        const listContainer = document.getElementById('list-container');
+        const navClose = document.getElementById('nav-close');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                listContainer.classList.add('show-menu');
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                listContainer.classList.remove('show-menu');
+            });
+        }
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const projectsGrid = document.getElementById('projectsGrid');
+        const projectCards = projectsGrid.getElementsByClassName('project-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+
+            Array.from(projectCards).forEach(card => {
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const org = card.querySelector('.project-org').textContent.toLowerCase();
+                const grant = card.querySelector('.grant-number').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || org.includes(searchTerm) || grant.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

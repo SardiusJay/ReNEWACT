@@ -309,15 +309,9 @@ a.product-link:hover {
   flex: 1;
 }
 .product-img img {
-  width: 200px;      
+  width: 70px;      
 }
 
-.product-img1 {
-  flex: 1;
-}
-.product-img1 img {
-  width: 30%;
-}
 
 .sample-text {
   text-align: center;

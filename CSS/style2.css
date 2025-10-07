@@ -304,12 +304,14 @@ a.product-link:hover {
 .featured-research {
   display: flex;
   margin: 1rem 0 3rem;
+  text-decoration: none;
 }
 .product-img {
   flex: 1;
 }
 .product-img img {
-  width: 100px;      
+  width: 200px;
+
 }
 
 

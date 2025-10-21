@@ -727,6 +727,11 @@ p {
   animation: fadeIn 0.3s ease;
 }
 
+.modal-content p {
+  white-space: pre-line; /* preserves newlines and spacing */
+}
+
+
 .modal-header {
   display: flex;
   align-items: center;

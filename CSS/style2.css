@@ -684,18 +684,6 @@ p {
   font-size: 0.95rem;
 }
 
-.bio {
-  max-height: 60px;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  font-style: italic;
-  color: #555;
-}
-
-.bio.expanded {
-  max-height: 300px;
-}
-
 .read-more-btn {
   background-color: #0066cc;
   color: white;
@@ -710,6 +698,71 @@ p {
 
 .read-more-btn:hover {
   background-color: #004d99;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  animation: fadeIn 0.3s ease;
+}
+
+.close {
+  color: #333;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #0066cc;
+}
+
+#modalName {
+  color: #003366;
+  margin-bottom: 5px;
+}
+
+#modalRole {
+  color: #666;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+#modalBio {
+  color: #333;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {

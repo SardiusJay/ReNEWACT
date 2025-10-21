@@ -164,7 +164,7 @@
 
 
     </div>
-    <div class="team-container">
+  <div class="team-container">
   <div class="profile-card">
     <img src="./CSS/images/Dr_Faloye.jpg" alt="Dr. Oluwaseun Faloye">
     <div class="profile-info">
@@ -173,12 +173,11 @@
       <p>Room, New College Building</p>
       <p><strong>Tel:</strong> +234-7037990959</p>
       <p><strong>Email:</strong> faloye.oluwaseun@lmu.edu.ng</p>
-      <p class="bio">
-        Dr. Oluwaseun Faloye is a leading researcher with expertise in sustainable energy systems
-        and environmental engineering. His work focuses on advancing cleaner technologies for
-        industrial applications...
-      </p>
-      <button class="read-more-btn">Read more</button>
+      <button class="read-more-btn" data-name="Dr. Oluwaseun T. Faloye" 
+        data-role="Research Cluster Leader"
+        data-bio="Dr. Oluwaseun Faloye is a leading researcher with expertise in sustainable energy systems and environmental engineering. His work focuses on advancing cleaner technologies for industrial applications, renewable energy integration, and waste-to-energy innovation. He is committed to training the next generation of engineers and contributing to global sustainability.">
+        Read more
+      </button>
     </div>
   </div>
 
@@ -190,12 +189,11 @@
       <p>Atlantique, Abomey–Calavi, Benin</p>
       <p><strong>Tel:</strong> +2290192911586</p>
       <p><strong>Email:</strong> fidele.suanon@gmail.com</p>
-      <p class="bio">
-        Dr. Fidèle Suanon, PhD, is a distinguished research scientist in the field of
-        Environmental Engineering, with a solid background in chemistry. He dedicates himself to
-        developing eco-friendly waste treatment solutions and water purification technologies...
-      </p>
-      <button class="read-more-btn">Read more</button>
+      <button class="read-more-btn" data-name="Dr. Fidèle Suanon"
+        data-role="Research Scientist"
+        data-bio="Dr. Fidèle Suanon, PhD, is a distinguished research scientist in the field of Environmental Engineering, with a solid background in chemistry. He dedicates himself to developing eco-friendly waste treatment methods, water purification systems, and sustainable environmental technologies that contribute to cleaner communities across Africa.">
+        Read more
+      </button>
     </div>
   </div>
 
@@ -206,12 +204,11 @@
       <p><strong>Laboratory Technologist</strong></p>
       <p>Environmental Engineering Laboratory</p>
       <p><strong>Tel:</strong> +2347085402384</p>
-      <p class="bio">
-        Mr. Segun Alabi is a skilled technologist specializing in environmental instrumentation and
-        laboratory analysis. He ensures accurate testing and supports research projects in the
-        Environmental Engineering laboratory...
-      </p>
-      <button class="read-more-btn">Read more</button>
+      <button class="read-more-btn" data-name="Mr. Segun Alabi"
+        data-role="Laboratory Technologist"
+        data-bio="Mr. Segun Alabi is a skilled technologist specializing in environmental instrumentation and laboratory analysis. He supports experimental setups, ensures accurate data collection, and maintains high standards in Environmental Engineering research.">
+        Read more
+      </button>
     </div>
   </div>
 
@@ -222,27 +219,46 @@
       <p><strong>Laboratory Technologist</strong></p>
       <p>Environmental Engineering Laboratory</p>
       <p><strong>Tel:</strong> +2347085402384</p>
-      <p class="bio">
-        Dr. Fan is an experienced laboratory technologist focused on precision analysis and
-        experimental procedures in environmental studies. His expertise contributes to
-        high-quality data and innovative lab processes...
-      </p>
-      <button class="read-more-btn">Read more</button>
+      <button class="read-more-btn" data-name="Dr. Fan"
+        data-role="Laboratory Technologist"
+        data-bio="Dr. Fan is an experienced laboratory technologist focused on precision analysis and experimental procedures in environmental studies. His expertise contributes to high-quality data generation and the development of advanced lab methodologies.">
+        Read more
+      </button>
     </div>
   </div>
 </div>
 
+<!-- Popup Modal -->
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalName"></h2>
+    <h4 id="modalRole"></h4>
+    <p id="modalBio"></p>
+  </div>
+</div>
+
 <script>
+  const modal = document.getElementById("bioModal");
+  const modalName = document.getElementById("modalName");
+  const modalRole = document.getElementById("modalRole");
+  const modalBio = document.getElementById("modalBio");
+  const closeBtn = document.querySelector(".close");
+
   const buttons = document.querySelectorAll(".read-more-btn");
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const bio = btn.previousElementSibling;
-      bio.classList.toggle("expanded");
-      btn.textContent = bio.classList.contains("expanded")
-        ? "Read less"
-        : "Read more";
+      modalName.textContent = btn.getAttribute("data-name");
+      modalRole.textContent = btn.getAttribute("data-role");
+      modalBio.textContent = btn.getAttribute("data-bio");
+      modal.style.display = "flex";
     });
   });
+
+  closeBtn.onclick = () => (modal.style.display = "none");
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
 </script>
 
 

@@ -164,6 +164,87 @@
 
 
     </div>
+    <div class="team-container">
+  <div class="profile-card">
+    <img src="./CSS/images/Dr_Faloye.jpg" alt="Dr. Oluwaseun Faloye">
+    <div class="profile-info">
+      <h3>Dr. Oluwaseun T. Faloye (R. Eng. COREN, MNAIE)</h3>
+      <p><strong>Research Cluster Leader</strong></p>
+      <p>Room, New College Building</p>
+      <p><strong>Tel:</strong> +234-7037990959</p>
+      <p><strong>Email:</strong> faloye.oluwaseun@lmu.edu.ng</p>
+      <p class="bio">
+        Dr. Oluwaseun Faloye is a leading researcher with expertise in sustainable energy systems
+        and environmental engineering. His work focuses on advancing cleaner technologies for
+        industrial applications...
+      </p>
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <img src="./CSS/images/Fidele_Suanon.jpg" alt="Dr. Fidèle Suanon">
+    <div class="profile-info">
+      <h3>Dr. Fidèle Suanon (Ph.D.)</h3>
+      <p><strong>Research Scientist</strong></p>
+      <p>Atlantique, Abomey–Calavi, Benin</p>
+      <p><strong>Tel:</strong> +2290192911586</p>
+      <p><strong>Email:</strong> fidele.suanon@gmail.com</p>
+      <p class="bio">
+        Dr. Fidèle Suanon, PhD, is a distinguished research scientist in the field of
+        Environmental Engineering, with a solid background in chemistry. He dedicates himself to
+        developing eco-friendly waste treatment solutions and water purification technologies...
+      </p>
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <img src="./CSS/images/Segun_Alabi.jpg" alt="Mr. Segun Alabi">
+    <div class="profile-info">
+      <h3>Mr. Segun Alabi</h3>
+      <p><strong>Laboratory Technologist</strong></p>
+      <p>Environmental Engineering Laboratory</p>
+      <p><strong>Tel:</strong> +2347085402384</p>
+      <p class="bio">
+        Mr. Segun Alabi is a skilled technologist specializing in environmental instrumentation and
+        laboratory analysis. He ensures accurate testing and supports research projects in the
+        Environmental Engineering laboratory...
+      </p>
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+
+  <div class="profile-card">
+    <img src="./CSS/images/Dr_Fan.jpg" alt="Dr Fan">
+    <div class="profile-info">
+      <h3>Dr. Fan</h3>
+      <p><strong>Laboratory Technologist</strong></p>
+      <p>Environmental Engineering Laboratory</p>
+      <p><strong>Tel:</strong> +2347085402384</p>
+      <p class="bio">
+        Dr. Fan is an experienced laboratory technologist focused on precision analysis and
+        experimental procedures in environmental studies. His expertise contributes to
+        high-quality data and innovative lab processes...
+      </p>
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll(".read-more-btn");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const bio = btn.previousElementSibling;
+      bio.classList.toggle("expanded");
+      btn.textContent = bio.classList.contains("expanded")
+        ? "Read less"
+        : "Read more";
+    });
+  });
+</script>
+
 
 
 

@@ -677,7 +677,7 @@ p {
 }
 
 .profile-info h3 {
-  color: #003366;
+  color: white;
   margin-bottom: 5px;
   font-size: 1.05rem;
 }
@@ -689,7 +689,7 @@ p {
 }
 
 .read-more-btn {
-  background-color: black;
+  background-color: rgb(37, 112, 43);
   color: white;
   border: none;
   border-radius: 15px;

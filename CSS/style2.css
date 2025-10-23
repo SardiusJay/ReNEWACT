@@ -682,6 +682,10 @@ p {
   font-size: 1.05rem;
 }
 
+.profile-info h3 span {
+  font-size: small;
+}
+
 .profile-info p {
   margin: 3px 0;
   color: #333;

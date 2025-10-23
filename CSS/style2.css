@@ -689,7 +689,7 @@ p {
 }
 
 .read-more-btn {
-  background-color: #0066cc;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 15px;
@@ -701,7 +701,7 @@ p {
 }
 
 .read-more-btn:hover {
-  background-color: #004d99;
+  background-color: green;
 }
 
 /* Modal styling */
